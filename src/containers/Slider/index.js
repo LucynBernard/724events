@@ -11,7 +11,7 @@ const Slider = () => {
   const byDateDesc = data?.focus?.slice().sort((evtA, evtB) =>
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   );
-
+  
   useEffect(() => {
   if (!byDateDesc || byDateDesc.length === 0) return undefined;
 
@@ -58,6 +58,7 @@ const Slider = () => {
               key={event.id}
               type="radio"
               name="radio-button"
+              className="bonjour"
               checked={index === radioIdx}
               readOnly
             />

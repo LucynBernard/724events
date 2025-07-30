@@ -21,15 +21,15 @@ const Slider = () => {
     );
   }, 5000);
 
+    return () => clearInterval(interval);
+}, [byDateDesc?.length]);
+
   //  const nextCard = () => {
   //   setTimeout(
   //     () => setIndex(index < byDateDesc.length ? index + 1 : 0),
   //     5000
   //   );
   // };
-
-  return () => clearInterval(interval);
-}, [byDateDesc?.length]);
 
   if (!byDateDesc || byDateDesc.length === 0) return null;
 
